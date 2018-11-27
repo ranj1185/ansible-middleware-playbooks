@@ -15,5 +15,5 @@
       private: yes
 
   roles:
-    - redhat-cop.ansible-role-jboss-common
-    - redhat-cop.jboss_eap
+    - ansible-role-jboss-common
+    - jboss_eap
