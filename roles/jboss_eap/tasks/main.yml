@@ -140,3 +140,6 @@
   with_items: "{{ jboss_instances }}"
   loop_control:
     loop_var: instance
+
+- name: Add the application user
+  include_tasks: add_user.yml
