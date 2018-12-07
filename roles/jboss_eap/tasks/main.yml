@@ -135,14 +135,14 @@
     msg: Invalid JBoss instance configuration
   when: jboss_instances is undefined or jboss_instances|length == 0
 
+- name: Add the application user
+  include_tasks: add_user.yml
+# with_items: "{{ jboss_eap_home }}"
+
 - name: Configure Instances
   include_tasks: jboss_instance.yml
   with_items: "{{ jboss_instances }}"
   loop_control:
     loop_var: instance
 
-- name: Add the application user
-  include_tasks: add_user.yml
-# with_items: "{{ jboss_eap_home }}"
-  tags:
-     - current
+
