@@ -143,3 +143,4 @@
 
 - name: Add the application user
   include_tasks: add_user.yml
+  with_items: "{{ jboss_eap_home }}"
