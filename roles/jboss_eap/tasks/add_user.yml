@@ -4,4 +4,4 @@
 #  shell: "{{ jboss_eap_home }}"/bin/add-user.sh -u 'adminuser1' -p 'password1!' -g 'admin'
   
 - name: add the application user
-  shell: /opt/jboss-as/jboss-eap-7.1/bin/add-user.sh -u 'adminuser1' -p 'password1!' -g 'admin'
+  command: /opt/jboss-as/jboss-eap-7.1/bin/add-user.sh -u 'adminuser1' -p 'password1!' -g 'admin'
