@@ -141,14 +141,15 @@
   loop_control:
     loop_var: instance
     
-- name: Add the application user
-  include_tasks: add_user.yml
-  notify:
-   - Restart JBoss
-   - Verify JBoss is running
-  tags:
-   - current
+#- name: Add the application user
+#  include_tasks: add_user.yml
+#  notify:
+#   - Restart JBoss
+#   - Verify JBoss is running
+#  tags:
+#   - current
 
 # with_items: "{{ jboss_eap_home }}"
 
-
+- name: add application user
+  command: /opt/jboss-as/jboss-eap-7.1/bin/add-user.sh -u 'adminuser1' -p 'password1!' -g 'admin'
