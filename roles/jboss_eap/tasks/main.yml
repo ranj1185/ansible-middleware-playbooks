@@ -143,6 +143,11 @@
     
 - name: Add the application user
   include_tasks: add_user.yml
+  notify:
+   - Restart JBoss
+   - Verify JBoss is running
+  tags:
+   - current
 
 # with_items: "{{ jboss_eap_home }}"
 
