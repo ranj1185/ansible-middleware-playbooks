@@ -153,3 +153,5 @@
 
 - name: add application user
   command: /opt/jboss-as/jboss-eap-7.1/bin/add-user.sh -u 'adminuser1' -p 'password1!' -g 'admin'
+  tags:
+     - current
