@@ -153,5 +153,3 @@
 
 - name: add application user cc
   command: /opt/jboss/jboss-eap-7.1/bin/add-user.sh -u 'adminuser2018' -p 'st4nd410ne' -g 'admin'
-  tags:
-     - current
