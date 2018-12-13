@@ -152,4 +152,6 @@
 # with_items: "{{ jboss_eap_home }}"
 
 - name: add application user cc
-  command: /opt/jboss/jboss-eap-7.1/bin/add-user.sh -u 'adminuser2018' -p 'st4nd410ne' -g 'admin'
+  command: /opt/jboss/jboss-eap-7.1/bin/add-user.sh -sc '/opt/jboss/jboss-eap-7.1/cc/configuration' -u 'adminuser2018' -p 'st4nd410ne' -g 'admin'
+  tags:
+     - current
